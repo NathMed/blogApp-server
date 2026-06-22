@@ -14,6 +14,6 @@ router.post("/login", userController.loginUser);
 router.get("/details", verify, userController.getProfile);
 
 // get all user
-router.get("/allUser", verify, userController.getAllUser);
+router.get("/allUser", userController.getAllUser);
 
 module.exports = router;
