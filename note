@@ -1,0 +1,53 @@
+1. main obj
+- Blog Application with simple CRUD Functionalities
+
+2. Target User?
+- user and admin
+
+3. Core features
+- sign up 
+- login
+- Create Blog (User) 
+- Read all available post (User(can view specific post))
+- Update post (User/ Own post(optional))
+- Delete post (User/ Own post(optional))
+- Add Comment (User/ Own post(optional))
+- Delete any post (Admin)
+    
+
+4. Data
+- User (firstname, lastname, email, password, isAdmin)
+- Post (headline, introduction, mainContent, date, author, comments(subdoc array))
+
+5. Tech Requirement
+- Express.js API, MongoDB with Mongoose for data storage and management, RESTful Architecture.
+
+6. Security
+- token, bcrypt hash
+
+7. Routes and cont
+Controller:
+- register
+- login
+- addPost (All User)
+- getAllPost (All User)
+- viewPostDetail (All User)
+- deletePost (Admin and User(optional))
+
+optional:
+- updatePost
+- getAllComment
+- addPostComment
+
+Routes:
+- POST /register
+- POST /login
+- POST /addPost
+- GET /getAllPost
+- GET /viewPost/:postId
+- DELETE /deletePost/:postId
+
+optional
+- PATCH /updatePost/:postId
+- POST /:postId/comments
+- GET /getAllComments
